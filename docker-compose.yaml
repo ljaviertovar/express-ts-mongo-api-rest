@@ -1,0 +1,8 @@
+services:
+  express-ts-mongo-api-rest-DB:
+    image: mongo:latest
+    container_name: express-ts-mongo-api-rest-DB
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongo:/data/db
