@@ -10,8 +10,6 @@ const mongoConnection = {
 	isConnected: 0,
 }
 
-console.log(process.env.MONGO_URL)
-
 export const connect = async () => {
 	if (mongoConnection.isConnected) {
 		console.log('Already connect!')
