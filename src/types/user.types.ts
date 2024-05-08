@@ -1,7 +1,7 @@
 export type User = {
 	username: string
 	email: string
-	authenticacion: Auth
+	authentication: Auth
 	createdAt?: string
 	updatedAt?: string
 }

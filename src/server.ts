@@ -7,6 +7,7 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 
 import { db } from './database'
+import router from './router'
 
 dotenv.config()
 
@@ -33,3 +34,5 @@ try {
 } catch (error) {
 	console.error(error)
 }
+
+app.use('/', router())

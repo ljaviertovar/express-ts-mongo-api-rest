@@ -1,8 +1,8 @@
 import express from 'express'
 
-import { createUser, getUserByEmail } from 'models/User'
+import { createUser, getUserByEmail } from '../models/User'
 
-import { authenticatiopn, random } from 'database/helpers'
+import { authentication, random } from '../helpers'
 
 export const register = async (req: express.Request, res: express.Response) => {
 	try {
@@ -22,8 +22,8 @@ export const register = async (req: express.Request, res: express.Response) => {
 			username,
 			email,
 			authentication: {
-				password: authenticatiopn(password, salt),
 				salt,
+				password: authentication(salt, password),
 			},
 		})
 
